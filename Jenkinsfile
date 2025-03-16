@@ -16,7 +16,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t $REGISTRY/$IMAGE_NAME:latest ./app'
+                    sh '/usr/local/bin/docker build -t localhost:5002/myapp:latest ./app'
                 }
             }
         }
